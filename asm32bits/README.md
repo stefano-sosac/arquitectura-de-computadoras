@@ -58,11 +58,11 @@ $ git status
 ```
 - Para añadir los archivos a git:
 ```
-$ git add asmMedia32.asm asmMedia32womin.asm
+$ git add asm32bits/asmMedia32.asm asm32bits/asmMedia32womin.asm
 ```
 - Para subir sus códigos al repositorio remoto (GitHub):
 ```
 $ git commit -m "<ponga-aqui-un-comentario-util>"
-$ git push origin master
+$ git push
 ```
 - Finalmente revisar su nota en la página web del repositorio. Cualquier consulta comuníquese con su JP.
