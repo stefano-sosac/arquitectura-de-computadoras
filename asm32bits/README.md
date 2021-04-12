@@ -4,11 +4,6 @@
 ## Problema 1:
 - Completar la función `asmMedia32.asm` en la sección entre comentarios. El código debe hallar la media aritmética de los números almacenados en un arreglo de **N** elementos que se encuentran en memoria. Revisar los comentarios en el archivo a modificar. 
 
-- Para clonar el repositorio y trabajar de forma local, realizar lo siguiente en un Terminal de Linux. Dentro de `<carpeta-del-repositorio>` encontrará todos los archivos necesarios para el desarrollo del laboratorio.
-```
-$ git clone <link-repositorio-alumno>
-$ cd <carpeta-del-repositorio>
-```
 - Para verificar el funcionamiento de su código, ejecute lo siguiente lo siguiente en un Terminal de Linux.
 ```
 $ bash test1.sh

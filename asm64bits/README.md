@@ -16,6 +16,47 @@ $ El numero en memoria es capicua
 ```
 $ El numero en memoria no es capicua
 ```
+- Para verificar el funcionamiento de su código, ejecute lo siguiente lo siguiente en un Terminal de Linux.
+```
+$ bash sol1.sh
+```
+- Si todo esta correcto debería observar un mensage como el siguiente en la línea de comandos (Terminal).
+```
+El numero no es capicua
+```
+
+## Problema 2:
+Para estar experiencia usted deberá presentar cuatro archivos, cada uno con unpro-
+grama en lenguaje ensamblador de 64 bits.
+- Un programa que imprima un caracter de una cadena.
+    - El archivo se deberá llamar `getchar.asm`
+    - La cadena se deberá encontrar en el segmento de datos.
+    - La posición del caracter que debe imprimir se deberá encontrar en el  segmento `.data`
+    - El caracter a imprimir deberá ser guardado en el segmento `.bss`
+
+- Un programa que copia una cadena de caracteres.
+    - El archivo se deberá llamar `copystring.asm`
+    - La cadena se deberá encontrar en el segmento de datos.
+    - La copia de la cadena deberá ser guardada en el segmento .bss
+    - Asuma que las cadenas tendrán un máximo de 30 caracteres.
+
+- Un programa que concatena dos cadenas de caracteres.
+    - El archivo se deberá llamar `concatstring.asm`
+    - Las cadenas se deberán encontrar en el segmento de datos.
+    - La concatenación de la cadena deberá ser guardada en el segmento .bss
+    - Asuma que las cadenas tendrán un máximo de 30 caracteres.
+
+- Un programa que separa las palabras de un texto almacenado en memoria.
+    - El archivo se deberá llamar `splitstring.asm`
+    - La cadena se deberá encontrar en el segmento de datos.
+    - Cada palabra separada se debe guardar en el segmento .bss
+    - Asuma que las palabras tendrán un máximo de 10 caracteres y el texto tendrá como máximo 4 palabras.
+    - Imprimir cada una de las palabras separadas.
+
+- Para verificar el funcionamiento de su código, ejecute lo siguiente lo siguiente en un Terminal de Linux.
+```
+$ bash sol2.sh
+```
 
 ## Subir solución a GitHub Classroom para auto revisión.
 Al terminar el laboratorio y luego de validar localmente la correcta ejecución de su programa, realizar un `push` de su solución a su repositorio para su corrección. Para ello ejecute los siguientes comandos en un Terminal de Linux. **NOTA:** Los comandos a continuación debe ejecutarlos dentro de la carpeta `<carpeta-del-repositorio>`.
