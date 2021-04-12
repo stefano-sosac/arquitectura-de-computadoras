@@ -1,4 +1,5 @@
 # IEE240 - Organización y Arquitectura de Computadoras
+# Lenguaje ensamblador x86
 
 ## Problema 1:
 - Completar la función `asmMedia32.asm` en la sección entre comentarios. El código debe hallar la media aritmética de los números almacenados en un arreglo de **N** elementos que se encuentran en memoria. Revisar los comentarios en el archivo a modificar. 
