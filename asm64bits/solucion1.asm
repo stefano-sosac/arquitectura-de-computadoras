@@ -41,7 +41,7 @@ capicua:
 	mov rdx, len1	    ; numero de elementos a imprimir
 	syscall			    ; system call --> llamadas a funciones del sistema (SO)
 	; --------------------------------------------- ;
-	
+
 exit:
     ; ---- return 0 ---- ;
 	mov rax, 60		; función para terminar la ejecución del programa. Similar a int 21h
