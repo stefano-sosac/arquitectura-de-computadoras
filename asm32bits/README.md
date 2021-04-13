@@ -45,7 +45,7 @@ $ ./labp2 num1 num2 num3 num4 num5 ...
 $ ./labp1 1 2 3 4 5 6 10  
 ```
 
-## Subir solución a GitHub Classroom para auto revisión.
+## Subir solución a GitHub Classroom para revisión.
 Al terminar el laboratorio y luego de validar localmente la correcta ejecución de su programa, realizar un `push` de su solución a su repositorio para su corrección. Para ello ejecute los siguientes comandos en un Terminal de Linux. **NOTA:** Los comandos a continuación debe ejecutarlos dentro de la carpeta `<carpeta-del-repositorio>`.
 
 - Verificar con el siguiente comando que se han modificado los archivos correctos. Debería aparecer en rojo los archivos `asmMedia32.asm` y `asmMedia32womin.asm`.
