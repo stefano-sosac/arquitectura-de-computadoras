@@ -7,7 +7,7 @@ ld copystring.o -o copystring
 ./copystring
 
 nasm -f elf64 -g concatstring.asm -o concatstring.o
-ld concatstring.o -o concatstring
+gcc -m64 concatstring.o -o concatstring
 ./concatstring
 
 nasm -f elf64 -g splitstring.asm -o splitstring.o
