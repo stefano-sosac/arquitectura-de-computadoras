@@ -29,7 +29,7 @@ asmMedia32:
     mov eax,[edi]   ; eax <- arr[0] cargamos en eax la primera posición del arreglo
     mov ebx,ecx
     dec ecx         ; ecx tiene el valor del tamaño del arreglo por lo que lo usamos de contador decreciente 
-    jz exit         ; saltamos hacia exit en caso el tamaño del arreglo de datos sera cero
+    jz exit         ; saltamos hacia exit en caso el tamaño del arreglo de datos sea cero
 
 suma:
     add edi,4       ; incrementamos la posición del puntero. Recordar que un entero tiene 4 bytes
