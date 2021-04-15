@@ -11,4 +11,3 @@ $ cd <carpeta-del-repositorio>
 
 - La carpeta `asm64bits` contiene 1 ejemplo y 1 problema propuesto en lenguaje ensamblador para Intel de 64 bits. La solución está implementada enteramente en asm por lo que no es necesario llamar a la función desde un programa en C.
 
-- Cualquier consulta realizarla en el foro correspondiente y/o en las asesorias.
