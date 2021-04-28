@@ -53,7 +53,7 @@ int main (int argc, char **argv){
     // Midiendo el tiempo de procesamiento para la funcion en ASM    
     clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &time1);
     effectASM(A,B,Casm,alpha,imgSize);
-    for(int i=0; i<100; i++){printf("%d\t", Casm[i]);}
+    for(int i=0; i<100; i++){printf("%u\t", Casm[i]);}
     clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &time2); //toc
     double tASM = (double)((time2.tv_sec-time1.tv_sec) + (time2.tv_nsec-time1.tv_nsec)/1e9);
     
@@ -79,8 +79,10 @@ int main (int argc, char **argv){
 
 // Funcion que implementa la operacion B + alpha(B-A), siendo A y B imagenes de entrada
 void effectC(unsigned char *A, unsigned char *B, unsigned char *Cc, float alpha, int imgSize){
+    unsigned char diff = 0;
     for(int i=0; i<imgSize; i++){
-        Cc[i] = (unsigned char) ((float)B[i] + alpha*((float)(B[i]-A[i])));
+        diff = B[i]-A[i];
+        Cc[i] = (unsigned char) ((float)B[i] + alpha*((float)diff));
         //printf("%d\t", B[i]-A[i]);
     }
 }
