@@ -8,8 +8,8 @@
 #include "readimglib.h"
 
 /* FIXME: Colocar los prototipos de sus funciones */
-
-
+void effectC(unsigned char *A, unsigned char *B, unsigned char *Cc, float alpha, int imgSize);
+void effectASM(unsigned char *A, unsigned char *B, unsigned char *Cc, float alpha, int imgSize);
 /* ---------------------------------------------- */
 
 int main (int argc, char **argv){ 
@@ -64,8 +64,8 @@ int main (int argc, char **argv){
 }
 
 
-void effectC(A,B,Cc,imgSize){
-    for(int i=0; i<size; i++){
-     c[i] = (unsigned char) ((float)b[i] + alpha*((float)(b[i]-a[i])))
+void effectC(unsigned char *A, unsigned char *B, unsigned char *Cc, float alpha, int imgSize){
+    for(int i=0; i<imgSize; i++){
+        Cc[i] = (unsigned char) ((float)B[i] + alpha*((float)(B[i]-A[i])));
     }
 }
