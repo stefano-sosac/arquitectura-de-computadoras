@@ -9,7 +9,7 @@
 
 /* FIXME: Colocar los prototipos de sus funciones */
 void effectC(unsigned char *A, unsigned char *B, unsigned char *Cc, float alpha, int imgSize);
-void effectASM(unsigned char *A, unsigned char *B, unsigned char *Cc, float alpha, int imgSize);
+extern void effectASM(unsigned char *A, unsigned char *B, unsigned char *Cc, float alpha, int imgSize);
 /* ---------------------------------------------- */
 
 int main (int argc, char **argv){ 
@@ -50,10 +50,16 @@ int main (int argc, char **argv){
 
     // Midiendo el tiempo de procesamiento para la funcion en ASM    
     clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &time1);
-    effectASM(A,B,Cc,alpha,imgSize);
+    effectASM(A,B,Casm,alpha,imgSize);
     clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &time2); //toc
-    double tC = (double)((time2.tv_sec-time1.tv_sec) + (time2.tv_nsec-time1.tv_nsec)/1e9);
+    double tASM = (double)((time2.tv_sec-time1.tv_sec) + (time2.tv_nsec-time1.tv_nsec)/1e9);
     
+    // Imprimimos los tiempos de cada una de las funciones y el SU relativo de ASM respecto a C
+    printf("El tiempo de ejecución en C es: %.5f ns\n", tC*1e9);
+    printf("El tiempo de ejecución en ASM es: %.5f ns\n", tASM*1e9);
+    printf("El speed-up es: %.2f \n", tC/tASM);
+
+
     // Guardar las imagenes --> Ejemplo:
     write_uchar2ppm("outputImgC.pgm", Cc, Nrows, Ncols, "P5"); // Guardo en el archivo outputImg,pgm la imagen en Cc.
     write_uchar2ppm("outputImgASM.pgm", Casm, Nrows, Ncols, "P5"); // Guardo en el archivo outputImg,pgm la imagen en Casm.

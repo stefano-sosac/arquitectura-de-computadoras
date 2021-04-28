@@ -1,6 +1,6 @@
 global effectASM
   section .text
-effectAS;:
+effectASM:
   xor  r8, r8
   xor  r9, r9
   xor   rax, rax
