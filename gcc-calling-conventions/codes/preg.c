@@ -47,6 +47,7 @@ int main (int argc, char **argv){
     // Midiendo el tiempo de procesamiento para la funcion en C    
     clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &time1);    // Inicio el contador de tiempo y guardo en la variable time1
     effectC(A,B,Cc,alpha,imgSize);  // Funcion implementada en C
+    //for(int i=0; i<100; i++){printf("%u\t",Cc[i]);}
     clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &time2);    // Detengo el contador de tiempo y guardo en la variable time2
     double tC = (double)((time2.tv_sec-time1.tv_sec) + (time2.tv_nsec-time1.tv_nsec)/1e9);  // Calculo el tiempo con la diferencia entre time2 y time1. 
 
@@ -54,6 +55,8 @@ int main (int argc, char **argv){
     clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &time1);
     effectASM(A,B,Casm,alpha,imgSize);
     for(int i=0; i<100; i++){printf("%u\t", Casm[i]);}
+
+    //for(int i=0; i<100; i++){printf("%u\t",Casm[i]);}
     clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &time2); //toc
     double tASM = (double)((time2.tv_sec-time1.tv_sec) + (time2.tv_nsec-time1.tv_nsec)/1e9);
     

@@ -31,7 +31,7 @@ bucle:
     mulss xmm1, xmm0        ; alpha * float(B[i]-A[i])
     addss xmm1, xmm2        ; float(B[i]) + alpha * float(B[i]-A[i])
     cvttss2si eax, xmm1     ; uchar(float(B[i]) + alpha * float(B[i]-A[i]))
-    mov [rdx+r8], al      ; Casm[i]
+    mov [rdx+r8], al        ; Casm[i]
     inc r8
     jmp bucle
 final:
