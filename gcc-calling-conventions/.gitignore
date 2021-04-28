@@ -1,5 +1,5 @@
-./code/testCharFloat.s
-./code/effectASM.o
-./code/preg
-./code/outputImgC
-./code/outputImgASM
+code/testCharFloat.s
+code/effectASM.o
+code/preg
+code/outputImgC
+code/outputImgASM
