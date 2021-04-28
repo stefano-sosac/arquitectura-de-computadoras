@@ -42,6 +42,8 @@ int main (int argc, char **argv){
     // FIXME >> para obtener mejores resultados, se debe ejecutar varias veces cada una de las funciones y calcular la mediana de los tiempos de ejecucion!
     // De esta forma evitamos considerar los tiempos iniciales de lectura de los datos de memoria. 
 
+    imgSize = Nrows * Ncols;
+
     // Midiendo el tiempo de procesamiento para la funcion en C    
     clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &time1);    // Inicio el contador de tiempo y guardo en la variable time1
     effectC(A,B,Cc,alpha,imgSize);  // Funcion implementada en C
@@ -55,8 +57,8 @@ int main (int argc, char **argv){
     double tASM = (double)((time2.tv_sec-time1.tv_sec) + (time2.tv_nsec-time1.tv_nsec)/1e9);
     
     // Imprimimos los tiempos de cada una de las funciones y el SU relativo de ASM respecto a C
-    printf("El tiempo de ejecución en C es: %.5f ns\n", tC*1e9);
-    printf("El tiempo de ejecución en ASM es: %.5f ns\n", tASM*1e9);
+    printf("El tiempo de ejecución en C es: %.5f ms\n", tC*1e3);
+    printf("El tiempo de ejecución en ASM es: %.5f ms\n", tASM*1e3);
     printf("El speed-up es: %.2f \n", tC/tASM);
 
 
@@ -78,5 +80,6 @@ int main (int argc, char **argv){
 void effectC(unsigned char *A, unsigned char *B, unsigned char *Cc, float alpha, int imgSize){
     for(int i=0; i<imgSize; i++){
         Cc[i] = (unsigned char) ((float)B[i] + alpha*((float)(B[i]-A[i])));
+        //printf("%d\t", B[i]-A[i]);
     }
 }
