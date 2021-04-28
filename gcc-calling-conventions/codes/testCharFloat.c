@@ -1,4 +1,11 @@
-//gcc -S -masm=intel testCharFloat.c -o testCharFloat.s
+/*
+Este codigo es para revisar como se puede realizar el cast de char a punto flotante. Para ello, generamos el archivo en assembler utilizando 
+la herramienta del GCC. Esto es una alternativa para poder codificar en ASM de forma mas eficiente y rapida. Como alumno puede elegir utilizarlo
+o no.
+Escribir lo siguiente en la linea de comandos para generar el archivo .S
+
+gcc -S -masm=intel testCharFloat.c -o testCharFloat.s
+*/
 
 #include <stdio.h>
 #include <stdlib.h>
