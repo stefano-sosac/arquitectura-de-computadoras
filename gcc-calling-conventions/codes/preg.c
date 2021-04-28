@@ -54,9 +54,8 @@ int main (int argc, char **argv){
     // Midiendo el tiempo de procesamiento para la funcion en ASM    
     clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &time1);
     effectASM(A,B,Casm,alpha,imgSize);
-    for(int i=0; i<100; i++){printf("%u\t", Casm[i]);}
+    //for(int i=0; i<100; i++){printf("%u\t", Casm[i]);}
 
-    //for(int i=0; i<100; i++){printf("%u\t",Casm[i]);}
     clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &time2); //toc
     double tASM = (double)((time2.tv_sec-time1.tv_sec) + (time2.tv_nsec-time1.tv_nsec)/1e9);
     
