@@ -60,8 +60,8 @@ int main (int argc, char **argv){
     double tASM = (double)((time2.tv_sec-time1.tv_sec) + (time2.tv_nsec-time1.tv_nsec)/1e9);
     
     // Imprimimos los tiempos de cada una de las funciones y el SU relativo de ASM respecto a C
-    printf("El tiempo de ejecución en C es: %.5f ms\n", tC*1e3);
-    printf("El tiempo de ejecución en ASM es: %.5f ms\n", tASM*1e3);
+    printf("El tiempo de ejecución en C es: %.5f us\n", tC*1e6);
+    printf("El tiempo de ejecución en ASM es: %.5f us\n", tASM*1e6);
     printf("El speed-up es: %.2f \n", tC/tASM);
 
 
@@ -88,3 +88,5 @@ void effectC(unsigned char *A, unsigned char *B, unsigned char *Cc, float alpha,
         //printf("%d\t", B[i]-A[i]);
     }
 }
+
+
