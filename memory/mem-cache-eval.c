@@ -14,33 +14,31 @@
 int main()
 {
 
-    FILE *out_file = fopen("output3.txt", "w"); // write only 
+    FILE *out_file = fopen("output.txt", "w"); // write only 
     clock_t start, end;
     double cpu_time;
     int i = 0;
     int j = 0;
+
     /* MAX_SIZE array is too big for stack.This is an unfortunate rough edge of the way the stack works.
        It lives in a fixed-size buffer, set by the program executable's configuration according to the
        operating system, but its actual size is seldom checked against the available space. */
     /* int arr[MAX_SIZE]; */
 
     int *arr = (int*)malloc(MAX_SIZE * sizeof(int));
-    //memset (arr,0,MAX_SIZE * sizeof(int));
-    /* CPU clock ticks count start */
+    // memset (arr,0,MAX_SIZE * sizeof(int));
+    
 
     for(int k = 0; k < 3; k++)
     {
+        /* CPU clock ticks count start */
         start = clock();
-
         /* Loop 1 */
         for (i = 0; i < MAX_SIZE; i++)
             arr[i] *= 3;
-
         /* CPU clock ticks count stop */
         end = clock();
-
         cpu_time = ((double) (end - start)) / CLOCKS_PER_SEC;
-
         printf("CPU time for loop 1 %.6f secs.\n", cpu_time);
     }
 
@@ -48,16 +46,12 @@ int main()
     {
         /* CPU clock ticks count start */
         start = clock();
-
         /* Loop 2 */
         for (i = 0; i < MAX_SIZE; i += j)
             arr[i] *= 3;
-
         /* CPU clock ticks count stop */
         end = clock();
-
         cpu_time = ((double) (end - start)) / CLOCKS_PER_SEC;
-
         printf("CPU time for loop 2 (j = %d) %.6f secs.\n", j, cpu_time);
     }
 
