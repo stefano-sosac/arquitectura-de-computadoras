@@ -5,3 +5,5 @@
 $ git clone <link-repositorio-alumno>
 $ cd <carpeta-del-repositorio>
 ```
+
+- La máquina virtual del curso ya tiene este repositorio dentro de sus archivos
